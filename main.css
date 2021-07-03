@@ -4,97 +4,214 @@
 .undis{
 	display: all;
 }
-#sipsel{
-	text-align: center;
-	border: 7px solid #A3A41B;
-	border-radius: 16px;
-	margin: 1em 1em 1em 1em;
 
-}
 body{
-	max-width: 500px;
-  margin: auto;
-	font-family: Open Sans;
-	font-size: 1em;
-	color: #000000;
-	background-color: paleturquoise;
-}
-.sipara{
-	 width: 5px;
- 	 padding: 0px;
-   font-size: 24px;
-   border-width: 0px;
-   border-color: #000000;
-   background-color: #85c8df;
-   color: #000000;
-   border-style: groove;
-   border-radius: 6px;
-   box-shadow: 0px 0px 0px rgba(66,66,66,.100);
-   text-shadow: 0px 0px 5px rgba(66,66,66,.75);
-}
-label{
-	display: inline-block;
-	margin:10px;
-	text-align: left;
-
-}
-.subbut{
-	width: 300px;
-	height: 50px;
-  color: white;
-  background: #4C8FFB;
-  border: 1px #3079ED solid;
-  box-shadow: inset 0 1px 0 #80B0FB;
-  margin: 2em;
-  text-align: center;
+	font-family: Roboto Slab;
+	background-color: #C6B4CE ;
 }
 
-.inc{
-	 width: 10em;
-	 height: 3em;
-	 font-size: 1em;
-	 border-width: 3px;
-	 border-color: black;
-	 background-color: skyblue;
-	 color: #000000;
-	 margin-bottom: 10px;
-	 border-style: double;
-	 box-shadow: 0px 0px 5px rgba(66,66,66,.75);
-	 text-shadow: 0px 0px 5px rgba(66,66,66,.75);
-
-}
-
-.box{
-
-	width: 21em;
-	background-color:palegoldenrod;
-
-}
-.box2{
-	display: inline-block;
+.pgno{
 	text-align: center;
-	width: 21em;
-	background-color: lightseagreen;
+	position: absolute;
+	width: 212px;
+	height: 40px;
+	line-height: 40px;
+	left: 81px;
+	top: 30px;
+	border-radius: 5px;
+
+	/* Fuschia/60 */
+
+	background: #FCDDEC;
+	border: 5px solid #000000;
+	backdrop-filter: blur(4px);
+
 }
-.a,.b{
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
+
+.label1{
 	text-align: center;
-	margin: 10px;
+	border-radius: 5px;
+	position: absolute;
+	width: 212px;
+	height: 42px;
+	line-height: 42px;
+	left: 81px;
+	top: 126px;
+	
+
+	background: #FFF5DE;
 }
-.incbox{
-	margin-top: 10px;
-	margin-bottom: 10px;
+.label2{
+
 	text-align: center;
+	border-radius: 5px;
+	position: absolute;
+	width: 212px;
+	height: 42px;
+	line-height: 42px;
+	left: 81px;
+	top: 350px;
+
+	background: #FFF5DE;
+}
+
+.a{
+	font-size: 48px;
+	border-radius: 5px;
+	position: absolute;
+	width: 134.5px;
+	height: 134.5px;
+	left: 48px;
+	top: 190px;
+	text-align: center;
+
+	/* Fuschia/60 */
+
+	background: #FCDDEC;
+}
+.b{
+	font-size: 48px;
+	border-radius: 5px;
+	position: absolute;
+	width: 134.5px;
+	height: 134.5px;
+	left: 47px;
+	top: 415px;
+	text-align: center;
+
+	/* Fuschia/60 */
+
+	background: #FCDDEC;
+}
+
+.c{
+	border-radius: 5px;
+	position: absolute;
+	width: 125px;
+	height: 55px;
+	left: 202px;
+	top: 191px;
+
+	/* Fuschia/80 */
+
+	background: #F178B6;
+}
+
+
+.d{
+	border-radius: 5px;
+	position: absolute;
+	width: 125px;
+	height: 55px;
+	left: 202px;
+	top: 269px;
+
+	/* Fuschia/80 */
+
+	background: #F178B6;
+}
+
+.e{
+	border-radius: 5px;
+	position: absolute;
+	width: 125px;
+	height: 55px;
+	left: 201px;
+	top: 415px;
+
+	/* Fuschia/80 */
+
+	background: #F178B6;
+}
+.f{
+	border-radius: 5px;
+	position: absolute;
+	width: 125px;
+	height: 55px;
+	left: 201px;
+	top: 493px;
+
+	/* Fuschia/80 */
+
+	background: #F178B6;
 }
 
 table{
-	width: 20%;
   background-color: #FFFFFF;
   border-collapse: seperate;
   border-width: 3px;
   border-color: #7EA8F8;
   border-style: solid;
   color: #000000;
+}
+
+.subbut1{
+	font-size: 16px;
+	border-radius: 5px;
+	position: absolute;
+	width: 279px;
+	height: 42px;
+	left: 48px;
+	top: 609px;
+
+	/* Fuschia/80 */
+
+	background: #F178B6;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subbut2{
+	font-size: 16px;
+	border-radius: 5px;
+	position: absolute;
+	width: 279px;
+	height: 42px;
+	left: 48px;
+	top: 669px;
+
+	/* Fuschia/80 */
+
+	background: #F178B6;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.inc{
+	font-size: 18px;
+}
+
+
+.ho{
+	position: absolute;
+	width: 278px;
+	height: 47px;
+	left: 45px;
+	top: 69px;
+
+	background: #E5E5E5;
+	border: 1px solid #FFF5DE;
+	box-sizing: border-box;
+}
+
+.he{
+	position: absolute;
+	width: 278px;
+	height: 47px;
+	left: 45px;
+	top: 134px;
+	background: #E5E5E5;
+	border: 1px solid #FFF5DE;
+	box-sizing: border-box;
+
+}
+
+.subbut3{
+	position: absolute;
+	width: 278px;
+	height: 47px;
+	left: 46px;
+	top: 208px;
+
+	background: rgba(63, 0, 198, 0.35);
+
 }
