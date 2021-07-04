@@ -75,12 +75,12 @@ calc = function(){
 	array[parseInt(pgno.textContent)].talqeen=parseInt(talqeens.value)
 	console.log(array)
 	// calculating total tanbeeh and talqeens
-	for (var i = 1; i < parseInt(pages)+1; i++) {
+	for (var i = 1; i < parseInt(array.length); i++) {
 		localtan = array[i].tanbeeh
 		globaltan = globaltan+localtan
 	}
 	
-	for (var i = 1; i < parseInt(pages)+1; i++) {
+	for (var i = 1; i < parseInt(array.length); i++) {
 		localtal = array[i].talqeen
 		globaltal = globaltal+localtal
 	}
@@ -91,22 +91,22 @@ calc = function(){
 	document.querySelector("#calc").classList.add("dis")
 	document.querySelector(".pgno").classList.add("dis")
 	// calculating marks
-	if (parseInt(pages)<6) {
+	if (parseInt(array.length)<6) {
 		marks=(10-(globaltan/2+globaltal));
-	}else if(parseInt(pages)<11){
+	}else if(parseInt(array.length)<11){
 			marks=(10-(globaltan/4+globaltal/2));
 	}else{
 			marks=(10-(globaltan/8+globaltal/4))
 	}
 	// creating table
 	rn = 3;
-	cn = pages;
+	cn = array.length;
   // rows
  for(var r=0;r<parseInt(rn,10);r++)
   {
    var x=document.getElementById('table').insertRow(r);
    //columns
-   for(var c=0;c<parseInt(cn,10)+1;c++)  
+   for(var c=0;c<parseInt(cn,10);c++)  
     {
      var y=  x.insertCell(c);
      if (r==0) {
@@ -125,8 +125,10 @@ calc = function(){
    }
    // final output
    document.querySelector("#final").classList.remove("dis")
+   document.querySelector("#pgnum").classList.add("dis")
    document.querySelector("#tantot").textContent = globaltan
    document.querySelector("#taltot").textContent = globaltal
    document.querySelector("#marks").textContent = marks
    
 }
+
