@@ -1,4 +1,5 @@
 array = [{Sipara:undefined}]
+var maqarray=[]
 console.log(array)
 
 
@@ -46,6 +47,16 @@ display = function(){
 
 
 nextpg = function(){
+	if (maqraatcheck == true){
+		var some = document.querySelector("select")
+		var someother = some.options[some.selectedIndex].text;
+		for (var i = 0; i < names.length; i++) {
+			if (names[i].name === someother){
+				pgno=document.querySelector("#pgno")
+				names[i].pages.push(parseInt(pgno.textContent))
+			}
+		}
+	}
 	array.push({})
 	pgno=document.querySelector("#pgno")
 	array[parseInt(pgno.textContent)].tanbeeh=parseInt(tanbeehs.value)
@@ -129,6 +140,131 @@ calc = function(){
    document.querySelector("#tantot").textContent = globaltan
    document.querySelector("#taltot").textContent = globaltal
    document.querySelector("#marks").textContent = marks
-   
+
+   if (maqraatcheck == true) {
+	   for (var i = 0; i < names.length; i++) {
+		   	let tancount = 0
+		   	let talcount = 0
+		   	for (var f = 0; f < names[i].pages.length; f++) {
+		   		tancount = tancount + array[names[i].pages[f]].tanbeeh
+		   		talcount = talcount + array[names[i].pages[f]].talqeen
+		   	}
+		   	let profile = {}
+		   	profile.name = names[i].name
+		   	profile.tanbeeh = tancount
+		   	profile.talqeen = talcount
+		   	marks = 10-((tancount/4)+(talcount/2))
+		   	profile.marks=marks
+		   	maqarray.push(profile)
+	   }
+	   console.log(maqarray)
+	   document.querySelector("select").classList.add("dis")
+	   document.querySelector("#alab").classList.add("dis")
+		}
+
+
+
+			// creating table
+	rn = maqarray.length;
+	cn = 4;
+  // rows
+  var maqtb = document.createElement("table")
+  maqtb.setAttribute("id","maqtb")
+  document.querySelector("#final").insertBefore(maqtb,document.querySelector("#reset"))
+ for(var r=0;r<parseInt(rn,10);r++)
+  {
+   var x=document.querySelector("#maqtb").insertRow(r);
+   //columns
+   for(var c=0;c<parseInt(cn,10);c++)  
+    {
+     var y=  x.insertCell(c);
+     if (r==0 && c==0) {
+     	y.innerHTML="Name";
+     }else if (r==0 && c==1) {
+     	y.innerHTML="Tanbeeh";
+     }else if (r==0 && c==2) {
+     	y.innerHTML="Talqeen";
+     }else if (r==0 && c==3) {
+     	y.innerHTML= "Marks";
+     }else if (c==0) {
+     	y.innerHTML= maqarray[r-1].name;
+     }else if (c==1) {
+     	y.innerHTML= maqarray[r-1].tanbeeh;
+     }else if (c==2) {
+     	y.innerHTML= maqarray[r-1].talqeen;
+     }else if (c==3) {
+     	y.innerHTML= maqarray[r-1].marks;
+     }
+      
+    }
+   }
+
+
+
+
 }
+
+names = []
+
+
+maq = function(){
+	maqraatcheck = true
+	window.pages = 20
+	document.querySelector("#sipsel").classList.add("dis")
+	document.querySelector("#maqr").classList.remove("dis")
+	var x = document.querySelector("#namelist");
+	var y = document.querySelector("#addname");
+  myScript = function(){
+		names.push({})
+		names[names.length-1].pages = []
+		names[names.length-1].name = x.value
+		var insrow = document.querySelector('#nametb').insertRow(names.length-1)
+		var inscell = insrow.insertCell(0)
+		inscell.innerHTML = names[names.length-1].name;
+		console.log(names[names.length-1].name)
+	  x.value=""
+   	
+}
+  y.addEventListener("click", myScript)
+
+}
+
+
+var next = function () {
+	if (names.length>0) {
+		document.querySelector("#maqr").classList.add("dis")
+		document.querySelector("#main").classList.remove("dis")
+		var dds = []
+		for (var i = 0; i < names.length; i++) {
+			dds.push(names[i].name)
+		}
+		console.log(dds)
+ 
+    var values = ["dog", "cat", "parrot", "rabbit"];
+ 
+    var select = document.createElement("select");
+    select.name = "dd";
+    select.id = "dd"
+ 
+    for (const dd of dds)
+    {
+        var option = document.createElement("option");
+        option.value = dd;
+        option.text = dd.charAt(0).toUpperCase() + dd.slice(1);
+        select.appendChild(option);
+    }
+ 
+    var label = document.createElement("label");
+    label.innerHTML = "Allot Page"
+    label.htmlFor = "dd";
+    label.setAttribute("id", "alab");
+ 
+    document.getElementById("main").appendChild(label).appendChild(select);
+    pgno=document.querySelector("#pgno")
+		pgno.textContent=1
+	}else {
+		alert("Please enter atleast one name")
+	}
+}
+
 

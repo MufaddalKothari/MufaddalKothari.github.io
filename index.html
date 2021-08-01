@@ -10,8 +10,16 @@
 		<input class="ho" type="integer" id="sipara" name="sipara" placeholder="Sipara"><br>
 		<input class="he" type="integer" name="pgnum" id="safha" placeholder="Number Of Pages" required ><br>
 		<button type="submit" class="subbut3" value="submit" onclick="display() "> Continue</button>
+		<button type="submit" class="maqbut" onclick="maq()">Maqraat</button>
 	</div>
-	<div class="dis">
+	<div class="maqr dis" id="maqr">
+		<input type="text" name="namelist" class="namelist" id="namelist">
+		<button class="addname" id="addname" value="Add" >Add</button>
+		<table id="nametb"></table>
+		<button id="finalizenames" value="final" onclick="next()">Continue</button>
+	</div>
+
+	<div id="main" class="dis">
 		<h3 class="pgno">Page :    <span id="pgno">1</span></h3>
 		<div class="box">
 			<div class="box2">
@@ -33,15 +41,16 @@
 		</div>
 		<button name="nextpg" class="subbut1" id="pgnum" onclick="nextpg()">Next Page</button>
 		<button name="calc" id="calc" class="subbut2" onclick="calc()">Calculate</button>
+		</div>
 		<div id="final" class="dis">
 			<table class="" id="table" style="border-width: 2px;" ></table>
-			<span class="">Total Tanbeeh : <span id="tantot"></span></span>
-			<span class="">  |  Total Talqeen : <span id="taltot"></span></span><br>
-			<span class="">Marks :<span id="marks"> </span></span><br>
-			<button class="subbut" onClick="window.location.reload();">New Sipara</button>
+			<span class="text">Total Tanbeeh : <span id="tantot"></span></span>
+			<span class="text">  |  Total Talqeen : <span id="taltot"></span></span><br><br>
+			<span class="text">Marks : <span id="marks"> </span></span><br><br>
+			<button id="reset" class="reset" onClick="window.location.reload();">New Sipara</button>
 		</div>
 
-	</div>
+	
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>
