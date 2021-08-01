@@ -165,7 +165,7 @@ calc = function(){
 
 
 			// creating table
-	rn = maqarray.length +1;
+	rn = maqarray.length+1;
 	cn = 4;
   // rows
   var maqtb = document.createElement("table")
