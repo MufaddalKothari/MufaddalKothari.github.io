@@ -82,12 +82,13 @@ body{
 
 .ttb{
 	display: inline-block;
-	height: 60px;
-	width: 100px;
+	height: 45px;
+	width: 75px;
 	line-height: 75px;
 	text-align: center;
 	vertical-align: baseline;
 	margin: 5px;
+	border-radius: 5px;
 	padding-top: 5px;
 	background: #FF8008;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
