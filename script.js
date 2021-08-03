@@ -213,6 +213,7 @@ maq = function(){
 	var x = document.querySelector("#namelist");
 	var y = document.querySelector("#addname");
   myScript = function(){
+  	if (x.value.length>0) {
 		names.push({})
 		names[names.length-1].pages = []
 		names[names.length-1].name = x.value
@@ -221,6 +222,7 @@ maq = function(){
 		inscell.innerHTML = names[names.length-1].name;
 		console.log(names[names.length-1].name)
 	  x.value=""
+	}
    	
 }
   y.addEventListener("click", myScript)

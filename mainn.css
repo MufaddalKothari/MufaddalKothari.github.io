@@ -3,7 +3,7 @@
 }
 
 body{
-	font-family: 'Bebas';
+	font-family: 'Merriweather';
 	background: aquamarine;
 	display: block;
 	text-align: center;
@@ -15,7 +15,7 @@ body{
 	background: #d53369;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #cbad6d, #d53369);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #cbad6d, #d53369); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	font-family: "Bebas";
+	font-family: "Merriweather";
 	border-radius: 5px;
 	border-width: 0px;
 	height: 40px;
@@ -29,7 +29,7 @@ body{
 	height: 35px;
 	width: 220px;
 	margin: 5px;
-	font-family: "Bebas";
+	font-family: "Merriweather";
 }
 
 .sqtb{
@@ -54,7 +54,7 @@ body{
 	width: 90px;
 	height: 40px;
 	margin: 8px;
-	font-family: "Bebas";
+	font-family: "Merriweather";
 	border-radius: 3px;
 	background: honeydew;
 	border-width: 0px;
@@ -83,8 +83,8 @@ body{
 .ttb{
 	display: inline-block;
 	height: 45px;
-	width: 75px;
-	line-height: 75px;
+	width: 150px;
+	line-height: 45px;
 	text-align: center;
 	vertical-align: baseline;
 	margin: 5px;
