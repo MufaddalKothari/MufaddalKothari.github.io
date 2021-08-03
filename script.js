@@ -2,7 +2,7 @@ array = [{Sipara:undefined}]
 var maqarray=[]
 console.log(array)
 
-
+window.maqraatcheck = false
 
 tanbeehs=document.querySelector(".a")
 talqeens=document.querySelector(".b")
@@ -26,6 +26,7 @@ decrease2 = function(){
 }
 
 display = function(){
+
 	var sipara = document.querySelector("#sipara").value
 	window.pages = document.querySelector("#safha").value
 	if (window.pages>20 || window.pages<0 || window.pages.length == 0) {
@@ -33,9 +34,8 @@ display = function(){
 		return
 	}else{
 	
-	let nondis = document.querySelector(".dis")
-	console.log(nondis)
-	nondis.classList.toggle("dis")
+	document.querySelector("#sipsel").classList.add("dis")
+	document.querySelector("#main").classList.remove("dis")
 	tanbeehs.value=0
 	talqeens.value=0
 	pgno=document.querySelector("#pgno")
@@ -51,7 +51,7 @@ nextpg = function(){
 		var some = document.querySelector("select")
 		var someother = some.options[some.selectedIndex].text;
 		for (var i = 0; i < names.length; i++) {
-			if (names[i].name === someother){
+			if (names[i].name == someother){
 				pgno=document.querySelector("#pgno")
 				names[i].pages.push(parseInt(pgno.textContent))
 			}
@@ -96,9 +96,9 @@ calc = function(){
 		globaltal = globaltal+localtal
 	}
 	// removing tanbeeh talqeen input tables and buttons
-	let uraw = document.querySelectorAll(".box")
-	uraw[0].classList.add("dis")
-	uraw[1].classList.add("dis")
+	let uraw = document.querySelector("#main")
+	uraw.classList.add("dis")
+	//uraw[1].classList.add("dis")
 	document.querySelector("#calc").classList.add("dis")
 	document.querySelector(".pgno").classList.add("dis")
 	// calculating marks
@@ -120,7 +120,9 @@ calc = function(){
    for(var c=0;c<parseInt(cn,10);c++)  
     {
      var y=  x.insertCell(c);
-     if (r==0) {
+     if (r==0 && c==0) {
+     	y.innerHTML="";
+     }else if (r==0) {
      	y.innerHTML=c;
      }else if (r==1 && c==0) {
      	y.innerHTML="Tanbeeh";
@@ -159,11 +161,7 @@ calc = function(){
 	   }
 	   console.log(maqarray)
 	   document.querySelector("select").classList.add("dis")
-	   document.querySelector("#alab").classList.add("dis")
-		}
-
-
-
+	   //document.querySelector("#alab").classList.add("dis")
 			// creating table
 	rn = maqarray.length+1;
 	cn = 4;
@@ -198,7 +196,7 @@ calc = function(){
       
     }
    }
-
+}
 
 
 
@@ -208,7 +206,7 @@ names = []
 
 
 maq = function(){
-	maqraatcheck = true
+	window.maqraatcheck = true
 	window.pages = 20
 	document.querySelector("#sipsel").classList.add("dis")
 	document.querySelector("#maqr").classList.remove("dis")
@@ -244,8 +242,9 @@ var next = function () {
  
     var select = document.createElement("select");
     select.name = "dd";
-    select.id = "dd"
- 
+    select.id = "dd";
+
+ 		select.setAttribute("class","tb")
     for (const dd of dds)
     {
         var option = document.createElement("option");
@@ -259,7 +258,9 @@ var next = function () {
     label.htmlFor = "dd";
     label.setAttribute("id", "alab");
  
-    document.getElementById("main").appendChild(label).appendChild(select);
+    let main = document.querySelector("#main")
+    main.insertBefore(select,main.children[1])
+
     pgno=document.querySelector("#pgno")
 		pgno.textContent=1
 	}else {

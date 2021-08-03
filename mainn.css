@@ -1,0 +1,137 @@
+.dis{
+	display: none;
+}
+
+body{
+	font-family: 'Bebas';
+	background: aquamarine;
+	display: block;
+	text-align: center;
+
+}
+
+
+.but{
+	background: #d53369;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #cbad6d, #d53369);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #cbad6d, #d53369); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: "Bebas";
+	border-radius: 5px;
+	border-width: 0px;
+	height: 40px;
+	width: 220px;
+	margin: 5px;
+}
+
+.tb{
+	border-radius: 5px;
+	border-width: 1px;
+	height: 35px;
+	width: 220px;
+	margin: 5px;
+	font-family: "Bebas";
+}
+
+.sqtb{
+	height: 3em;
+	width: 3em;
+	text-align: center;
+	font-size: 2em;
+}
+
+.lb{
+	display: block;
+	margin: auto;
+	padding: 0px 5px 0px 5px ;
+	height: 25px;
+	width: 120px;
+	background: lightseagreen;
+	border-radius: 3px;
+	margin-bottom: 5px;
+}
+
+.inc{
+	width: 90px;
+	height: 40px;
+	margin: 8px;
+	font-family: "Bebas";
+	border-radius: 3px;
+	background: honeydew;
+	border-width: 0px;
+
+}
+
+/**/
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/*
+.one {
+  flex: 0 0 65%;
+}
+
+.two {
+  flex: 1;
+}
+*/
+
+
+.ttb{
+	display: inline-block;
+	height: 75px;
+	width: 120px;
+	line-height: 75px;
+	text-align: center;
+	vertical-align: baseline;
+	margin: 5px;
+	padding-top: 5px;
+	background: #FF8008;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+
+table 			      { 
+  border-spacing: 1; 
+  border-collapse: collapse; 
+  background:white;
+  border-radius:6px;
+  overflow:hidden;
+  max-width:800px; 
+  width:100%;
+  margin:0 auto;
+  position:relative;
+  }
+  *{ position:relative }
+  
+  td,th           { padding-left:8px}
+
+  thead tr        { 
+    height:60px;
+    background:#FFED86;
+    font-size:16px;
+  }
+  
+  tbody tr        { height:48px; border-bottom:1px solid #E3F1D5 ;}
+    &:last-child  { border:0; }
+  }
+
+ 	td,th { text-align:left;}
+		&.l { text-align:right }
+		&.c { text-align:center }
+		&.r { text-align:center }
+	}
+}
+
+
+#main{
+	display: flex;
+	align-items: center;
+}
